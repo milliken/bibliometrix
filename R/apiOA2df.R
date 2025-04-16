@@ -344,7 +344,7 @@ extract_corresponding_info <- function(article, authors_info) {
   
   tibble(
     corresponding_authors = corresponding_authors,
-    corresponding_institutions = corresponding_institutions
+    corresponding_institutions = corresponding_institutions,
     corresponding_countries  = corresponding_countries 
   )
 }
