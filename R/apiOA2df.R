@@ -333,10 +333,17 @@ extract_corresponding_info <- function(article, authors_info) {
   } else {
     NA
   }
+
+  corresponding_countries <- if (!is.null(article$countries) & !is.na(corresponding_authors)) {
+    paste(authors_info$countries[authors_info$author_id %in% id], collapse = ";")
+  } else {
+    NA
+  }
   
   tibble(
     corresponding_authors = corresponding_authors,
     corresponding_institutions = corresponding_institutions
+    corresponding_countries  = corresponding_countries 
   )
 }
 
