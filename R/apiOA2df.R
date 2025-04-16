@@ -118,6 +118,8 @@ relabelling_OA_API <- function(DATA){
   label[label %in% "oa_url"] <- "URL"
   label[label %in% "sdg_display_name"] <- "SDG"
   label[label %in% "mesh_terms"] <- "MESH"
+  label[label %in% "corresponding_countries"] <- "AU1_CO"
+  
  
   names(DATA) <- label
   return(DATA)
